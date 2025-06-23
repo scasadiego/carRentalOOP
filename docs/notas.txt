@@ -1,0 +1,1 @@
+23/06/25    El diagrama UML no está completo y hay que complementarle lo que se haga en la clase UI
