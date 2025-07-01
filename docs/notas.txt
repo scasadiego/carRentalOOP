@@ -1,9 +1,13 @@
+Marcar con un * lo que se vaya solucionando
+
 23/06/25    El diagrama UML no está completo y hay que complementarle lo que se haga en la clase UI
 01/07/25    Hay que validar que en el menú de alquilar un vehiculo cuando se seleccione una clase sin vehiculo como que se devuelva
             antes de preguntar el ID, también validar que el ID exista antes de preguntar por los km
             en la función de ver reportes básicos(#6), no se muestran los clientes antes del ID
             al parecer cuando se crea un nuevo cliente se borra el anterior
             En el coso de mostrar clientes, no muestra todos, pasa algo raro
-            
+            Test: Se registraron 3 clientes, hice un alquiler con 1, inmediatamente fui a devolverlo y no sale cuando
+            muestra clientes, sin embargo si deja devolverlo exitosamente
+
 
 VALIDAR     Deja meter atributos en campo que no deberían, ejemplo: un . en id
