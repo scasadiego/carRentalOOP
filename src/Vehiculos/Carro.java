@@ -1,25 +1,25 @@
-package Vehiculo;
+package Vehiculos;
 
-public class carro extends vehiculo {
+public class Carro extends Vehiculo {
     private int numPuertas;
     private String transmisionTipo;
 
     //Al parecer toca poner primero el super y luego con el this en los constructores
-    public carro(int numPuertas, String transmisionTipo,int ID, String marca, int yearF,int tarifaKm, String modelo){
+    public Carro(int numPuertas, String transmisionTipo,String ID, String marca, String yearF,float tarifaKm, String modelo){
         super(ID,marca,yearF,tarifaKm,modelo);
         this.numPuertas=numPuertas;this.transmisionTipo=transmisionTipo;
     }
-    public carro(){}
-    int getNumPuertas(){
+    public Carro(){}
+    public int getNumPuertas(){
         return this.numPuertas;
     }
-    void setNumPuertas(int numPuertas){
+    public void setNumPuertas(int numPuertas){
         this.numPuertas=numPuertas;
     }
-    String getTransmisionTipo(){
+    public String getTransmisionTipo(){
         return this.transmisionTipo;
     }
-    void setTransmisionTipo(String transmisionTipo){
+    public void setTransmisionTipo(String transmisionTipo){
         this.transmisionTipo=transmisionTipo;
     }
 }
