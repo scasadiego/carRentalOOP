@@ -1,12 +1,10 @@
 package Alquiler;
-import Vehiculos.Vehiculo;
-import Vehiculos.bElectrica;
+import Clientes.Cliente;
 import Vehiculos.Carro;
 import Vehiculos.Moto;
-
+import Vehiculos.Vehiculo;
+import Vehiculos.bElectrica;
 import java.util.ArrayList;
-
-import Clientes.Cliente;
 
 public class Alquiler {
     public Vehiculo vehiculo;
@@ -109,10 +107,9 @@ public class Alquiler {
             System.out.println("No hay clientes registrados.");
             return;
         }
-        for (int i = 0; i < clientes.size(); i++) {
-            if (clientes.get(i).getEstado()) {
-                System.out.println("- id:" + clientes.get(i).getID()+" - Nombre:"+ clientes.get(i).getNombre()+" - Email: "+ clientes.get(i).getEmail());
-            }
+        for (int i = 0; i < clientes.size(); i++) {  
+            System.out.println("- id:" + clientes.get(i).getID()+" - Nombre:"+ clientes.get(i).getNombre()+" - Email: "+ clientes.get(i).getEmail());
+            
         }
     }
 
@@ -253,5 +250,58 @@ public class Alquiler {
         System.out.println("Cliente no encontrado.");
     }
 
+    public void mostrarAlquileresActivosPorCliente(String idCliente){
+        for (Cliente c : clientes) {
+            if (c.getID().equals(idCliente)) {
+                c.mostrarAlquileresActivos();
+                return;
+            }
+        }
+        System.out.println("Cliente no encontrado.");      
+    }
 
+    //False cuando encuentra uno igual y true cuando es diferente
+    public boolean compararID(String ID){
+        for(Cliente c : clientes){
+            if(c.getID().equals(ID)){
+                System.out.println("La ID "+ID+" ya se encuentra registrada en el sistema");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean compararIDc(String ID){
+        for(Carro c : carros){
+            if(c.getID().equals(ID)){
+                System.out.println("La ID "+ID+" ya se encuentra registrada en el sistema");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean compararIDm(String ID){
+        for(Moto m : motos){
+            if(m.getID().equals(ID)){
+                System.out.println("La ID "+ID+" ya se encuentra registrada en el sistema");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean compararIDb(String ID){
+        for(bElectrica b : bicicletas){
+            if(b.getID().equals(ID)){
+                System.out.println("La ID "+ID+" ya se encuentra registrada en el sistema");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void getAquileresPorCliente(Cliente cliente){
+        System.out.println(". "+cliente.getAlquilados());
+    }
 }
