@@ -23,10 +23,14 @@ public class Main{
                     break;
                 case 6:
                     ui.mostrarHistorialDeCliente();
+                    break;
+                case 7: 
+                    ui.verAlquileresPorCliente();
+                    break;
                  
             }
 
-        }while(opcion !=7);
+        }while(opcion !=8);
 
     }
 }
