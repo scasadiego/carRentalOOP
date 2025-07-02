@@ -1,9 +1,7 @@
 package Clientes;
-import Vehiculos.Vehiculo;
-
-import java.util.ArrayList;
-
 import Alquiler.RegistroAlquiler;
+import Vehiculos.Vehiculo;
+import java.util.ArrayList;
 
 public class Cliente {
     private String nombre;
@@ -54,15 +52,30 @@ public class Cliente {
     }
 
     public void mostrarHistorialAlquileres() {
-    if (alquilados.isEmpty()) {
-        System.out.println("No tiene historial de alquileres.");
-        return;
+        if (alquilados.isEmpty()) {
+            System.out.println("No tiene historial de alquileres.");
+            return;
+        }
+
+        System.out.println("Historial de alquileres del cliente:");
+        for (RegistroAlquiler registro : alquilados) {
+            if (registro.getVehiculo().getEstado()){
+                System.out.println(registro.toString());
+            }
+        }
     }
 
-    System.out.println("Historial de alquileres del cliente:");
-    for (RegistroAlquiler registro : alquilados) {
-        System.out.println(registro.toString());
+    public void mostrarAlquileresActivos() {
+        if (alquilados.isEmpty()) {
+            System.out.println("No tiene historial de alquileres.");
+            return;
+        }
+        System.out.println("Alquileres activos del cliente:");
+        for (RegistroAlquiler registro : alquilados) {
+            if (!registro.getVehiculo().getEstado()){
+                System.out.println(registro.toString());
+            }
+        }
     }
-}
 
 }
