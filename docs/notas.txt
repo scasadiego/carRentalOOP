@@ -1,6 +1,6 @@
 Marcar con un * lo que se vaya solucionando
 
-23/06/25    El diagrama UML no está completo y hay que complementarle lo que se haga en la clase UI
+23/06/25    *El diagrama UML no está completo y hay que complementarle lo que se haga en la clase UI
 
 01/07/25    *Hay que validar que en el menú de alquilar un vehiculo cuando se seleccione una clase sin vehiculo como que se devuelva
             *antes de preguntar el ID, también validar que el ID exista antes de preguntar por los km
@@ -11,7 +11,7 @@ Marcar con un * lo que se vaya solucionando
             *muestra clientes, sin embargo si deja devolverlo exitosamente
 
 02/07/25    *En el menú de alquilar vehiculos cuando no hay clientes igual deja como hacer el alquiler
-            Hay que cambiar full el diagrama UML
+            *Hay que cambiar full el diagrama UML
             *En el menú de mostrar reportes básicos muestra también los alquileres activos
             *Es true cuando está disponible y false cuando no, casi que es solo clonar las funciones
 VALIDAR     *Deja meter atributos en campo que no deberían, ejemplo: un . en id
