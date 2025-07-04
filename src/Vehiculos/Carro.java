@@ -4,7 +4,6 @@ public class Carro extends Vehiculo {
     private int numPuertas;
     private String transmisionTipo;
 
-    //Al parecer toca poner primero el super y luego con el this en los constructores
     public Carro(int numPuertas, String transmisionTipo,String ID, String marca, String yearF,float tarifaKm, String modelo){
         super(ID,marca,yearF,tarifaKm,modelo);
         this.numPuertas=numPuertas;this.transmisionTipo=transmisionTipo;
